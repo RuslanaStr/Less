@@ -1,0 +1,70 @@
+
+@border: 2px solid black;
+.flex {
+    display: flex;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    .flex();
+    justify-content: center;
+    align-items: center;
+    .container {
+        height: 25%;
+        width: 80%;
+        border: @border;
+        .flex();
+        justify-content: space-around;
+        align-items: center;
+        @media (max-width: 700px){
+            flex-direction: column;
+        }
+        @media (min-width: 700px) and (max-width: 900px){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .text {
+            height: 40%;
+            width: 25%;
+            border: @border;
+            .flex();
+            align-items: center;
+            
+        }
+        .first {
+            background-color: rgb(243, 7, 7);
+            @media (max-width: 700px) {
+                height: 25%;
+                width: 80%;
+            }
+            @media (min-width: 700px) and (max-width: 900px){
+                width: 45%;
+            }
+        }
+        .second{
+            background-color: rgb(243, 133, 7);
+            justify-content: center;
+            @media (max-width:700px) {
+                height: 25%;
+                width: 80%;
+            }
+            @media (min-width: 700px) and (max-width: 900px){
+                width: 45%;
+            }
+        }
+        .third {
+            background-color: rgb(239, 243, 7);
+           justify-content: right;
+           @media (max-width:700px){
+            height: 15%;
+            width: 80%;
+           }
+           @media (min-width: 700px) and (max-width: 900px){
+            width: 95%;
+        }
+        }
+    }
+}
+
